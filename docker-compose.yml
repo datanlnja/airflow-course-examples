@@ -10,6 +10,10 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_DB=airflow
     restart: always
+    ports:
+      - 5432:5432
+    volumes:
+      - ../airflow_data/pg_data:/var/lib/postgresql/data
 
   # Airflow в отдельном контейнере
   airflow:
@@ -26,3 +30,5 @@ services:
     # Пробрасываем папку с дагами
     volumes:
       - ./airflow/dags:/usr/local/airflow/dags
+      - ./airflow/plugins:/root/airflow/plugins
+      - ../airflow_data/logs:/usr/local/airflow/logs

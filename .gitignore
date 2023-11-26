@@ -1,0 +1,4 @@
+airflow/project/logs/dag_processor_manager/dag_processor_manager.log
+airflow/dag.py
+config/airflow.cfg
+airflow/dag.py
