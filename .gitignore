@@ -3,3 +3,4 @@ airflow/dag.py
 config/airflow.cfg
 airflow/dag.py
 *.pyc
+__pycache__/
