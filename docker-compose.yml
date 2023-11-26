@@ -33,6 +33,10 @@ services:
       - ./airflow/plugins:/root/airflow/plugins
       - logs:/usr/local/airflow/logs
 
+# Задав таким образом вольюмы
+# нам не нужно заботиться о том где будет папка
+# В которо1 они будут лежать
+# Для баз данных и логов такой способ более верный
 volumes:
   pgdata:
   logs:
