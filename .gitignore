@@ -4,3 +4,4 @@ config/airflow.cfg
 airflow/dag.py
 *.pyc
 __pycache__/
+sandbox/
