@@ -23,13 +23,15 @@ ENV AIRFLOW__CORE__PLUGINS_FOLDER=/usr/local/airflow/plugins
 
 # Замени executor и сменим бд на постгрес
 ENV AIRFLOW__CORE__EXECUTOR=LocalExecutor
-ENV AIRFLOW__CORE__SQL_ALCHEMY_CONN="postgresql+psycopg2://postgres:postgres@postgres:5432/airflow"
+ENV AIRFLOW__CORE__SQL_ALCHEMY_CONN=postgres://postgres:postgres@postgres:5432/airflow
 
 # Отключим примеры кода
 ENV AIRFLOW__CORE__LOAD_EXAMPLES=False
 
 # Установка airflow с поддержкой всех баз данных
 RUN pip install apache-airflow[postgres]==${AIRFLOW_VERSION}
+
+RUN pip install SQLAlchemy==1.3.24
 
 # Установка визуального редактора для работы в Airflow UI
 # Дополнительная настройка чтобы можно было редактировать код
