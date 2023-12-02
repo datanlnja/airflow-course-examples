@@ -2,7 +2,7 @@
 
 # Создание БД
 sleep 10
-airflow db init
+airflow db upgrade
 sleep 10
 
 airflow users create \

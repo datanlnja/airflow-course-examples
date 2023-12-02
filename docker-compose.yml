@@ -3,7 +3,7 @@ services:
   # Постгрес база в отдельном контейнере
   postgres:
     # Устанавливаем готовый образ
-    image: postgres:9.6 
+    image: postgres
     # Задаем глобальные переменные для доступа к PG
     environment:
       - POSTGRES_PASSWORD=postgres
