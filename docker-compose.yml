@@ -6,12 +6,12 @@ services:
     image: postgres
     # Задаем глобальные переменные для доступа к PG
     environment:
-      - POSTGRES_PASSWORD=postgres
-      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=ghwf94hfw8
+      - POSTGRES_USER=airflow
       - POSTGRES_DB=airflow
     restart: always
     ports:
-      - 5432:5432
+      - 5434:5432
     volumes:
       - pgdata:/var/lib/postgresql/data
 
