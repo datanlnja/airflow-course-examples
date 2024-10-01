@@ -13,7 +13,7 @@ services:
     ports:
       - 5434:5432
     volumes:
-      - pgdata:/var/lib/postgresql/data
+      - pgdata_student:/var/lib/postgresql/data
 
   # Airflow в отдельном контейнере
   airflow:
@@ -38,5 +38,5 @@ services:
 # В которой они будут лежать
 # Для баз данных и логов такой способ более простой и безопасный
 volumes:
-  pgdata:
+  pgdata_student:
   logs:
